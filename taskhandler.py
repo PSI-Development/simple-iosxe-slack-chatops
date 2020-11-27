@@ -9,8 +9,8 @@ def process_pubsub(event, context):
          event (dict): Event payload.
          context (google.cloud.functions.Context): Metadata for the event.
     """
-    ios_username = os.environ['IOS_USERNAME']
-    ios_password = os.environ['IOS_PASSWORD']
+    ios_username = os.environ.get['IOS_USERNAME']
+    ios_password = os.environ.get['IOS_PASSWORD']
 
     # Get published data, get slack's response url and do restconf call to IOS-XE NE
     pubsub_message = base64.b64decode(event['data']).decode('utf-8')
