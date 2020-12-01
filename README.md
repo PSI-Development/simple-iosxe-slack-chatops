@@ -54,5 +54,5 @@ When it's all setup, we can access network resource information using Slack Chan
 Issuing Slack Slash Command in channel:
 ![Image of Command](https://user-images.githubusercontent.com/9415402/100743118-6db99f00-340e-11eb-8bb2-6091650b738a.png)
 
-Result returend in Slack's channel:
+Result returned in Slack's channel:
 ![Image of Result](https://user-images.githubusercontent.com/9415402/100743296-b6715800-340e-11eb-943d-72d257a80d2f.png)
