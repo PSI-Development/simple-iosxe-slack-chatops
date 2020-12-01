@@ -20,7 +20,7 @@ def pubsub_handler(request):
         # Converting slack command data to dict and add NE url information
         req_dict = request.form.to_dict()
         # Get NE's ip address from slack command and add as "ios_url" and specify netconf resource to be acessed
-        req_dict["ios_url"] = "https://" + req_dict["text"] + ":7443/restconf/data/Cisco-IOS-XE-process-cpu-oper:cpu-usage/cpu-utilization?depth=1"
+        req_dict["ios_url"] = "https://" + req_dict["text"] + "/restconf/data/Cisco-IOS-XE-process-cpu-oper:cpu-usage/cpu-utilization?depth=1"
         data = json.dumps(req_dict)
         # When you publish a message, the client returns a future.
         future = publisher.publish(
